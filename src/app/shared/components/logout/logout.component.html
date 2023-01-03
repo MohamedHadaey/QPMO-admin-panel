@@ -1,0 +1,20 @@
+<button class="hover bg-danger" (click)="togglePopup()"><span>{{"log-out" | translate
+}}</span></button>
+
+ <div class="check-popup-logout">
+  <div class="container">
+    <div class="popup-content">
+      <img src="../../../../assets/images/alert.png" alt="alert">
+      <h4>{{"log-out-word" | translate}}</h4>
+      <p>{{"check-logout-msg" | translate}}</p>
+        <div class="row footer d-flex justify-content-center align-items-center">
+          <div class="col-6 py-2 d-flex justify-content-center align-items-center">
+            <button type="submit" (click)="togglePopup();toggleProfilePopup()">{{"cancel" | translate }}</button>
+          </div>
+          <div class="col-6 py-2 d-flex justify-content-center align-items-center">
+            <button type="button" (click)="logOut()">{{"log-out-word" | translate }}</button>
+          </div>
+        </div>
+    </div>
+  </div>
+ </div>

@@ -7,11 +7,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProjectsComponent } from './components/projects/projects.component';
+// import ApexCharts for charts
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { ReportsComponent } from './components/reports/reports.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ReportsComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +23,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
     ReactiveFormsModule,
     TranslateModule,
     BrowserModule,
+    NgApexchartsModule,
     SharedModule
 
   ],

@@ -19,7 +19,7 @@
   "Zeyad Ahmed": "زياد احمد",
   "Gamal Elsayed": "جمال السيد ابراهيم",
 
-  "projects": "تتبع المشاريع",
+  "projects": "إدارة المشاريع",
   "action-reason": "سبب الإجراء",
   "reason": "اشعار موافقة على عرض السعر",
 
@@ -127,6 +127,11 @@
   "roads-bridges": "طرق وكباري",
   "current": "حالية",
   "late": "متأخرة",
-  "almost-done": "قاربت على الإنتهاء"
+  "almost-done": "قاربت على الإنتهاء",
+
+  "logoutt": "logout",
+  "log-out-word": "تسحيل الخروج",
+  "check-logout-msg": "هل أنت متأكد انك تريد تسجبل الخروج؟"
+
   }
 

@@ -12,7 +12,9 @@ import {  HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MenuModule } from './menu/menu.module';
 import { SharedModule } from './shared/shared.module';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+// import NgApexchartsModule for charts
+import { NgApexchartsModule } from "ng-apexcharts";
 @NgModule({
   declarations: [
     AppComponent
@@ -28,6 +30,8 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgApexchartsModule,
+    MatSlideToggleModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,

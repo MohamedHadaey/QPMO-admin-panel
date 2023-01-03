@@ -195,6 +195,7 @@ a {
         padding: 0 15px;
         transition: right 0.5s;
 
+
         img {
           width: 25px;
 
@@ -221,17 +222,10 @@ a {
           border-radius: 50%;
         }
 
-        h2 {
-          color: #749BC4;
-          font-size: 34px;
-          font-weight: bold;
-          letter-spacing: 0px;
-
-          sub {
-            color: #3D3D3D;
-            font-size: 20px;
-          }
+        .logo-bar {
+          width: 150px;
         }
+
         .dropdown-toggle {
           margin-bottom: 3px;
           border: none;
@@ -657,6 +651,9 @@ a {
             width: 22px !important;
           }
 
+          .logo-bar{
+            width: 140px !important;
+          }
           .profile {
             width: 18px !important;
           }
@@ -842,3 +839,6 @@ body { margin: 0 }
   margin: 0;
   font-family: 'Cairo', sans-serif !important;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

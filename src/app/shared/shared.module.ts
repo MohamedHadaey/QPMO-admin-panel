@@ -7,6 +7,8 @@ import { LanguageComponent } from './components/language/language.component';
 import { TogglerComponent } from './components/toggler/toggler.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LogoutComponent } from './components/logout/logout.component';
+import { ProfileIconComponent } from './components/profile-icon/profile-icon.component';
 
 
 
@@ -17,6 +19,8 @@ import { BrowserModule } from '@angular/platform-browser';
     SliderComponent,
     LanguageComponent,
     TogglerComponent,
+    LogoutComponent,
+    ProfileIconComponent,
 
 
   ],
@@ -33,8 +37,8 @@ import { BrowserModule } from '@angular/platform-browser';
     SliderComponent,
     LanguageComponent,
     TogglerComponent,
-
-
+    LogoutComponent,
+    ProfileIconComponent
   ]
 })
 export class SharedModule { }

@@ -8,7 +8,9 @@ import { VarifyPassComponent } from './auth/components/varify-pass/varify-pass.c
 import { AuthGuard } from './auth/services/auth.guard';
 import { HomeComponent } from './menu/components/home/home.component';
 import { ProjectsComponent } from './menu/components/projects/projects.component';
+import { ReportsComponent } from './menu/components/reports/reports.component';
 import { LanguageComponent } from './shared/components/language/language.component';
+import { LogoutComponent } from './shared/components/logout/logout.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { SearchComponent } from './shared/components/search/search.component';
 
@@ -17,6 +19,7 @@ const routes: Routes = [
   {path: "", redirectTo: "login", pathMatch: "full"},
   {path:"home", component: HomeComponent , canActivate:[AuthGuard]},
   {path:"projects", component: ProjectsComponent , canActivate:[AuthGuard]},
+  {path:"reports", component: ReportsComponent, canActivate:[AuthGuard]},
   {path:"login", component: LoginComponent},
   {path:"varify-pass", component: VarifyPassComponent},
   {path:"varify-changed-pass", component: VarifyChangedPassComponent},
@@ -27,6 +30,7 @@ const routes: Routes = [
   {path:"navbar", component: NavbarComponent},
   {path:"language", component: LanguageComponent},
   {path:"Search", component: SearchComponent},
+  {path:"logout", component: LogoutComponent},
   {path:"**" , redirectTo: "login", pathMatch: "full"}
 ];
 

@@ -19,7 +19,7 @@
 "Zeyad Ahmed": "Zeyad Ahmed",
 "Gamal Elsayed": "Gamal Elsayed",
 
-"projects": "Tracking Projects",
+"projects": "Project Management",
 "action-reason": "Action Reason",
 "reason": "Notice of approval of the offer",
 
@@ -130,6 +130,10 @@
 "roads-bridges": "Roads and bridges",
 "current": "Current",
 "late": "Late",
-"almost-done": "Almost Done"
+"almost-done": "Almost Done",
+
+"logoutt": "logout",
+"log-out-word": "Sign Out",
+"check-logout-msg": "Are you sure you want to Sign Out?"
 }
 

@@ -1,0 +1,27 @@
+<div class="profile-icon">
+  <img src="../../../../assets/images/Dashboard-icons/profile.png" alt="profile" (click)="toggleProfilePopup()">
+    <ul class="profile-popup" [style.left]="checkDir?'10px':'-140px'">
+      <li>
+        <div class="row">
+          <div class="col-4 p-0">
+            <div class="profile-img">
+              <div class="layer">
+                <img class="img-fluid" src="../../../../assets/images/Dashboard-icons/profile.jpg"
+                  alt="profile-img">
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <p>{{"ahmed-esmael" | translate }}</p>
+          </div>
+        </div>
+      </li>
+      <li class="mt-2">
+        <button routerLink="/profile" class="hover bg-secondary"><span>{{"profile" | translate
+            }}</span></button>
+      </li>
+      <li class="mb-2">
+            <app-logout></app-logout>
+      </li>
+    </ul>
+</div>

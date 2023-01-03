@@ -6,12 +6,8 @@
         <ul class="h-100">
           <li class="active" routerLink="/home"><img src="../../../../assets/images/Dashboard-icons/home.png"
               alt="home"><span>{{"home" | translate }}</span></li>
-          <li routerLink="/projects"><img src="../../../../assets/images/Dashboard-icons/trackprojects.png"
+          <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
               alt="projects"><span>{{"projects" | translate }}</span></li>
-          <li routerLink="/calender"><img src="../../../../assets/images/Dashboard-icons/calender.png"
-              alt="calender"><span>{{"calender" | translate }}</span></li>
-          <li routerLink="/favourites"><img src="../../../../assets/images/Dashboard-icons/fav-darkgray.png"
-              alt="favourites"><span>{{"favourite" | translate }}</span></li>
           <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
               alt="reports"><span>{{"statistics" | translate }}</span></li>
         </ul>
@@ -29,12 +25,8 @@
             <ul class="h-100">
               <li class="active" routerLink="/home"><img src="../../../../assets/images/Dashboard-icons/home.png"
                   alt="home"><span>{{"home" | translate }}</span></li>
-              <li routerLink="/projects"><img src="../../../../assets/images/Dashboard-icons/trackprojects.png"
+              <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
                   alt="projects"><span>{{"projects" | translate }}</span></li>
-              <li routerLink="/calender"><img src="../../../../assets/images/Dashboard-icons/calender.png"
-                  alt="calender"><span>{{"calender" | translate }}</span></li>
-              <li routerLink="/favourites"><img src="../../../../assets/images/Dashboard-icons/fav-darkgray.png"
-                  alt="favourites"><span>{{"favourite" | translate }}</span></li>
               <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
                   alt="reports"><span>{{"statistics" | translate }}</span></li>
             </ul>
@@ -47,45 +39,147 @@
     <div class="content-body content-body-rtl">
       <nav class="navbar">
         <app-toggler></app-toggler>
-        <h2>QPMO<sub>system</sub></h2>
+        <img src="../../../../assets/images/logo-bar.png" alt="qpmo-admin-panel" class="logo-bar">
         <div class="d-flex justify-content-center align-items-center icons">
           <app-language></app-language>
-          <img src="../../../../assets/images/Dashboard-icons/msg01.png" alt="msgs" routerLink="/messages">
-          <div class="dropdown">
-            <button class="dropdown-toggle mx-2 p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <img src="../../../../assets/images/Dashboard-icons/profile.png" alt="user" class="profile m-0">
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <div class="row">
-                  <div class="col-4 p-0">
-                    <div class="profile-img">
-                      <div class="layer">
-                        <img class="img-fluid" src="../../../../assets/images/Dashboard-icons/profile.jpg"
-                          alt="profile-img">
+          <app-profile-icon></app-profile-icon>
+        </div>
+      </nav>
+      <div class="container-fluid w-100 pt-3">
+        <div class="row p-0">
+          <div class="col-12 p-3">
+            <div class="list p-3">
+              <div class="row date-range">
+                <form action="">
+                <div class="range start">
+                  <span>{{"from" | translate }}</span>
+                  <input type="date" value="2022-01-01" id="start" name="range-start">
+                </div>
+                <div class="range end">
+                  <span>{{"to" | translate }}</span>
+                  <input type="date" value="2022-12-30" id="end" name="range-start">
+                </div>
+              </form>
+              </div>
+              <div class="row reports">
+                <div class="col-md-6 p-3">
+                  <div class="employees p-3">
+                    <div class="employees-head w-100 d-flex justify-content-between align-items-center">
+                      <div class="logo d-flex align-items-center">
+                        <img src="../../../../assets/images/Dashboard-icons/rate.png" alt="worker">
+                        <h4>{{"projects-archive-states" | translate }}</h4>
+                      </div>
+                    </div>
+                    <!-- begin:: chart -->
+                    <div id="chart" class="my-2">
+                      <apx-chart
+                        [series]="statechartOptions.series"
+                        [chart]="statechartOptions.chart"
+                        [dataLabels]="statechartOptions.dataLabels"
+                        [plotOptions]="statechartOptions.plotOptions"
+                        [yaxis]="statechartOptions.yaxis"
+                        [xaxis]="statechartOptions.xaxis"
+                        [legend]="statechartOptions.legend"
+                        [colors]="statechartOptions.colors"
+                        [grid]="statechartOptions.grid"
+                      ></apx-chart>
+                    </div>
+
+                    <!-- end:: charts -->
+                  </div>
+                </div>
+                <div class="col-md-6 p-3">
+                  <div class="employees p-3">
+                    <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
+                      <div class="logo d-flex align-items-center flex-grow-1">
+                        <img src="../../../../assets/images/Dashboard-icons/rate.png" alt="rate">
+                        <h4>{{"project-states" | translate }}</h4>
+                      </div>
+                    </div>
+                    <div class="employees-number py-0">
+                      <div class="row">
+                        <div class="chart-container">
+                          <apx-chart [chart]="typeChartDetails" [series]="typeChartSeries" [labels]="[' إنارة طرق ',' طرق ',' صرف صحى ',' كبارى ']" [dataLabels]="typechartDetails"></apx-chart>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-8">
-                    <p>{{"ahmed-esmael" | translate }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>{{"completed-projects" | translate }}</h4>
+                    <div class="number p-3">
+                      <h3 id="color-yellow">80</h3>
+                    </div>
                   </div>
                 </div>
-              </li>
-              <li class="mt-2">
-                <button routerLink="/profile" class="hover bg-secondary"><span>{{"profile" | translate
-                    }}</span></button>
-              </li>
-              <li class="mb-2">
-                <button (click)="logOut()" routerLink="/login" class="hover bg-danger"><span>{{"log-out" | translate
-                    }}</span></button>
-              </li>
-            </ul>
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>{{"delayed-projects" | translate }}</h4>
+                    <div class="number p-3">
+                      <h3 id="color-red">25</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>{{"projects-neering" | translate }}</h4>
+                    <div class="number p-3">
+                      <h3 id="color-green">70</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>{{"current-projects" | translate }}</h4>
+                    <div class="number p-3">
+                      <h3 id="color-primary">122</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg p-3">
+                  <div class="projects-follow-card">
+                    <h4>{{"not-financial" | translate }}</h4>
+                    <div class="number p-3">
+                      <h3 id="color-secondary">08</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row justify-content-center align-items-center">
+                <div class="col-sm-8">
+                  <div class="employees p-3">
+                    <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
+                      <div class="logo d-flex align-items-center flex-grow-1">
+                        <img src="../../../../assets/images/Dashboard-icons/archives.png" alt="rate">
+                        <h4>{{"project-archive" | translate }}</h4>
+                      </div>
+
+                    </div>
+                    <div class="employees-number py-0">
+                      <div class="row">
+                        <!--The content below is only a placeholder and can be replaced.-->
+                        <div id="chart">
+                          <apx-chart
+                            [series]="archivechartOptions.series"
+                            [chart]="archivechartOptions.chart"
+                            [xaxis]="archivechartOptions.xaxis"
+                            [stroke]="archivechartOptions.stroke"
+                            [tooltip]="archivechartOptions.tooltip"
+                            [dataLabels]="archivechartOptions.dataLabels"
+                          ></apx-chart>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-      <div class="container-fluid pt-3 ">
-     
       </div>
     </div>
   </div>

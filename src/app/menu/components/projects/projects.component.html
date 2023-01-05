@@ -45,8 +45,147 @@
           <app-profile-icon></app-profile-icon>
         </div>
       </nav>
-      <div class="container-fluid pt-3 ">
+      <div class="container-fluid w-100 pt-3">
+        <div class="row">
+          <div class="col-sm-10 text-center p-2 px-3 w-100">
+            <div class="search ">
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="search" [placeholder]="'search' | translate" class="p-2">
+            </div>
+          </div>
+        </div>
+        <div class="row row-list ">
+          <div class="col-12">
+            <div class="add-btn">
+              <button type="button" class="add-project-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">{{"add-project-msg" | translate}} <span><i class="fa-solid fa-plus"></i></span></button>
+  
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+              </div>
 
+            </div>
+          </div>
+          <div class="col-12 p-3">
+            <div class="list table-responsive">
+              <table class="table" >
+                <thead>
+                  <tr>
+                    <th scope="col">{{"project-name" | translate }}</th>
+                    <th scope="col">{{"project-type" | translate }}</th>
+                    <th scope="col">{{"contractors-name" | translate }}</th>
+                    <th scope="col">{{"expire-date" | translate }}</th>
+                    <th scope="col">{{"project-state" | translate }}</th>
+                  </tr>
+                </thead>
+                <tbody >
+
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj1" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"road-light" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Abdullah Ibrahim" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj2" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"road" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Mohamed Abdelrahman" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj3" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"sanitaion" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Yahia Abdullah" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj4" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"road" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Islam Hassan" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj5" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"bridges" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Zayn Mostafa" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj1" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"road-light" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Tarek Ali" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj2" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"bridges" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Hamza Sayed" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj3" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"sanitaion" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Zeyad Ahmed" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj4" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"bridges" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Gamal Elsayed" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border-line"></div><div class="item"><p>{{"proj5" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"sanitaion" | translate }}</p></div></td>
+                    <td><div class="item"><p>{{"Hamza Sayed" | translate }}</p></div></td>
+                    <td><div class="item"><p>13-08-2022</p></div></td>
+                    <td><div class="item"><p>{{"lorem" | translate }}</p></div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav aria-label="Page navigation example" class="nav-pag">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item " (click)="getPrviousPage()">
+                    <a class="page-link" [class.disable]="currentPage==1"><i class="fa-solid fa-angle-left"></i></a>
+                  </li>
+                  <!-- <li class="page-item"><a class="page-link">...</a></li> -->
+                  <li class="page-item" (click)="changePage($event)"><a class="page-link" [class.page]="currentPage==1">1</a></li>
+                  <li class="page-item" (click)="changePage($event)"><a [class.page]="currentPage==2" class="page-link">2</a></li>
+                  <li class="page-item" (click)="changePage($event)"><a class="page-link" [class.page]="currentPage==3">3</a></li>
+                  <li class="page-item"><a class="page-link">...</a></li>
+                  <li *ngIf="currentPage>3" class="page-item"><a class="page-link" [class.page]="currentPage>3">{{currentPage}}</a>
+                  </li>
+                  <li class="page-item" (click)="getNextPage()">
+                    <a class="page-link"><i class="fa-solid fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

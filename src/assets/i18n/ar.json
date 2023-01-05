@@ -2,6 +2,7 @@
   "home": "الرئيسية",
   "contract-no": "رقم العقد",
   "project-name": "اسم المشروع",
+  "projecy-type": "نوع المشروع",
   "contractors-name": "اسم المقاول",
   "expire-date": "تاريخ الانتهاء",
   "completion-rate": "نسبة الإنجاز",
@@ -22,6 +23,14 @@
   "projects": "إدارة المشاريع",
   "action-reason": "سبب الإجراء",
   "reason": "اشعار موافقة على عرض السعر",
+  "add-project-msg": "إضافة مشروع جديد",
+  "lorem": "لوريم إيبسوم",
+  "proj1": "مشروع السلامة",
+  "proj2": "مشروع عنيزة",
+  "proj3": "مشروع بريدة",
+  "proj4": "مشروع الخضر",
+  "proj5": "مشروع الصفاء",
+
 
   "calender": "التقويم",
   "project-start": "بدء المشروع",
@@ -131,7 +140,21 @@
 
   "logoutt": "logout",
   "log-out-word": "تسحيل الخروج",
-  "check-logout-msg": "هل أنت متأكد انك تريد تسجبل الخروج؟"
+  "check-logout-msg": "هل أنت متأكد انك تريد تسجبل الخروج؟",
 
+  "reports": "reports",
+  "project-status-card-title": "تقرير بحالة المشاريع خلال فترة",
+  "contractors-reports-title": "تقارير المقاولين",
+  "project-reports-title": "تقارير المشاريع حسب الموظف",
+  "reports-logs-title": "تقارير بحركات الدخول لمستخدم خلال فترة",
+  "project-tracking": "تقارير تتبع المشاريع خلال فترة",
+
+  "control-panel": "لوحة التحكم",
+  "employees-settings": "اعدادات الموظفين",
+  "constractor-settings": "اعدادات المقاولين",
+  "project-types-settings": "اعدادات انواع المشاريع",
+  "file-type-settings": "اعدادات انواع الملفات",
+  "departments": "الاقسام والادارات",
+  "projects-process": "العمليات على المشاريع"
   }
 

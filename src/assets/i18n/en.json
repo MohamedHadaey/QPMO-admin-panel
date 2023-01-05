@@ -2,6 +2,7 @@
 "home": "Home",
 "contract-no": "Contract No.",
 "project-name": "Project Name",
+"projecy-type": "Project Type",
 "contractors-name": "Contractor's Name",
 "expire-date": "Expiry Date",
 "completion-rate": "Completion Rate",
@@ -22,6 +23,13 @@
 "projects": "Project Management",
 "action-reason": "Action Reason",
 "reason": "Notice of approval of the offer",
+"add-project-msg": "Add a new project",
+"lorem": "Lorem, ipsum",
+"proj1": "Lorem ipsum dolor sit",
+"proj2": "Excepteur sint occaecat",
+"proj3": "Lorem ipsum dolor sit",
+"proj4": "sed do eiusmod tempor",
+"proj5": "Duis aute irure",
 
 "calender": "Calender",
 "project-start": "Project Start",
@@ -134,6 +142,22 @@
 
 "logoutt": "logout",
 "log-out-word": "Sign Out",
-"check-logout-msg": "Are you sure you want to Sign Out?"
+"check-logout-msg": "Are you sure you want to Sign Out?",
+
+"reports": "reports",
+"project-status-card-title": "Project status report over a period",
+"contractors-reports-title": "Contractors reports",
+"project-reports-title": "Project reports by employee",
+"reports-logs-title": "Reports of user logs movements during a period",
+"project-tracking": "Project tracking reports over a period",
+
+"control-panel": "Control Panel",
+"employees-settings": "Employees settings",
+"constractor-settings": "Contractor settings",
+"project-types-settings": "Project types settings",
+"file-type-settings": "File type settings",
+"departments": "Departments",
+"projects-process": "Departments"
+
 }
 

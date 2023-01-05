@@ -1,5 +1,60 @@
 .container-fluid {
+  padding: 50px !important;
 
+  .reports-row {
+   background-color: #fff;
+   border-radius: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   box-shadow: 0px 0px 5px 1px #ccc;
+   padding: 50px;
+
+   .col-md-4 {
+    .card {
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 10px;
+      .card-image {
+        background-color: #fff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        img{
+          width: 150px;
+        }
+      }
+
+      .card-title {
+        padding: 10px 10px 0 10px;
+      }
+    }
+   }
+
+   .col-md-4:first-of-type .card {
+    box-shadow: 0px 0px 5px 1px #F3EBEB;
+    background-color: #F3EBEB;
+   }
+
+   .col-md-4:nth-of-type(2) .card {
+    box-shadow: 0px 0px 5px 1px #FFEEE2;
+    background-color: #FFEEE2;
+   }
+   .col-md-4:nth-of-type(3) .card {
+    box-shadow: 0px 0px 5px 1px #EEFCEF;
+    background-color: #EEFCEF;
+   }
+   .col-md-4:nth-of-type(4) .card {
+    box-shadow: 0px 0px 5px 1px #F4F5F9;
+    background-color: #F4F5F9;
+   }
+   .col-md-4:nth-of-type(5) .card {
+    box-shadow: 0px 0px 5px 1px #E6F5FA;
+    background-color: #E6F5FA;
+   }
+  }
 }
 
 
@@ -8,7 +63,28 @@
 
 /* start small screen */
 @media screen and (max-width:576px) {
- 
+  .container-fluid {
+      padding: 25px !important;
+
+      .reports-row {
+        padding: 10px;
+
+        .col-md-4 {
+          .card {
+
+            padding: 10px;
+
+            .card-image {
+
+
+              img {
+                width: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
 
 }
 /* end small screen */

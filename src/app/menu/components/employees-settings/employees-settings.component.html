@@ -7,19 +7,19 @@
               alt="home"><span>{{"home" | translate }}</span></li>
           <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
               alt="projects"><span>{{"projects" | translate }}</span></li>
-          <li class="active" routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
+          <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
               alt="reports"><span>{{"statistics" | translate }}</span></li>
               <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
                 alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-                <div class="collapse " id="collapseExample">
+                <div class="collapse show sub-list" id="collapseExample">
                   <div class="card card-body border-0 py-0 ">
-                    <ul class="py-1 sub-list">
-                      <li routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
-                  <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
-                  <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
-                  <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
-                  <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
-                  <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
+                    <ul class="py-1">
+                      <li class="active" routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
+                      <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
+                      <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
+                      <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
+                      <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
+                      <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
                     </ul>
                   </div>
                 </div>
@@ -40,14 +40,14 @@
                   alt="home"><span>{{"home" | translate }}</span></li>
               <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
                   alt="projects"><span>{{"projects" | translate }}</span></li>
-              <li class="active" routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
+              <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
                   alt="reports"><span>{{"statistics" | translate }}</span></li>
                   <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
                     alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-                    <div class="collapse " id="collapseExample">
+                    <div class="collapse show sub-list" id="collapseExample">
                       <div class="card card-body border-0 py-0 ">
-                        <ul class="py-1 sub-list">
-                          <li routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
+                        <ul class="py-1">
+                          <li class="active" routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
                           <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
                           <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
                           <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
@@ -72,58 +72,10 @@
           <app-profile-icon></app-profile-icon>
         </div>
       </nav>
-      <div class="container-fluid w-100 pt-3">
-        <div class="row reports-row">
-          <div class="col-md-4 p-3">
-            <div class="card text-center">
-              <div class="card-image">
-                <img src="../../../../assets/images/p-status.png" alt="project status">
-              </div>
-              <div class="card-title">
-                <h4>{{"project-status-card-title" | translate}}</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 p-3">
-            <div class="card text-center">
-              <div class="card-image">
-                <img src="../../../../assets/images/Contractors reports.png" alt="project status">
-              </div>
-              <div class="card-title">
-                <h4>{{"contractors-reports-title" | translate}}</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 p-3">
-            <div class="card text-center">
-              <div class="card-image">
-                <img src="../../../../assets/images/p-reports.png" alt="project status">
-              </div>
-              <div class="card-title">
-                <h4>{{"project-reports-title" | translate}}</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 p-3">
-            <div class="card text-center">
-              <div class="card-image">
-                <img src="../../../../assets/images/user logs.png" alt="project status">
-              </div>
-              <div class="card-title">
-                <h4>{{"reports-logs-title" | translate}}</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 p-3">
-            <div class="card text-center">
-              <div class="card-image">
-                <img src="../../../../assets/images/p-tracking reports.png" alt="project status">
-              </div>
-              <div class="card-title">
-                <h4>{{"project-tracking" | translate}}</h4>
-              </div>
-            </div>
-          </div>
+      <div class="container-fluid w-100 p-4 p-md-5">
+        <div class="row settings-row bg-primary">
+        <h1 class="text-center">Employees settings</h1>
+
         </div>
       </div>
     </div>

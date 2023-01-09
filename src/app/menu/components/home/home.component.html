@@ -10,17 +10,17 @@
               alt="projects"><span>{{"projects" | translate }}</span></li>
           <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
               alt="reports"><span>{{"statistics" | translate }}</span></li>
-          <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><img src="../../../../assets/images/control.png"
+          <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
             alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body border-0">
-                <ul >
-                  <li><p>{{"employees-settings" | translate }}</p></li>
-                  <li><p>{{"constractor-settings" | translate }}</p></li>
-                  <li><p>{{"project-types-settings" | translate }}</p></li>
-                  <li><p>{{"file-type-settings" | translate }}</p></li>
-                  <li><p>{{"departments" | translate }}</p></li>
-                  <li><p>{{"projects-process" | translate }}</p></li>
+            <div class="collapse  " id="collapseExample">
+              <div class="card card-body border-0 py-0 ">
+                <ul class="py-1 sub-list">
+                  <li routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
+                  <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
+                  <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
+                  <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
+                  <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
+                  <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
                 </ul>
               </div>
             </div>
@@ -43,8 +43,20 @@
                   alt="projects"><span>{{"projects" | translate }}</span></li>
               <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
                   alt="reports"><span>{{"statistics" | translate }}</span></li>
-              <li routerLink="/reports"><img src="../../../../assets/images/control.png"
+              <li  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
                 alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body border-0 py-0 ">
+                    <ul class="py-1 sub-list">
+                      <li routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
+                      <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
+                      <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
+                      <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
+                      <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
+                      <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
+                    </ul>
+                  </div>
+                </div>
             </ul>
             <div class="list-group list-group-flush">
             </div>

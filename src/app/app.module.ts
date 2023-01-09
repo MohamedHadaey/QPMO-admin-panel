@@ -15,6 +15,7 @@ import { SharedModule } from './shared/shared.module';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // import NgApexchartsModule for charts
 import { NgApexchartsModule } from "ng-apexcharts";
+import { UserModule } from './user/user.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -30,6 +31,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    UserModule,
     NgApexchartsModule,
     MatSlideToggleModule,
     ReactiveFormsModule,

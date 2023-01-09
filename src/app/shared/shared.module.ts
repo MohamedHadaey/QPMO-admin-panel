@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
 import { SliderComponent } from './components/slider/slider.component';
@@ -27,7 +28,7 @@ import { ProfileIconComponent } from './components/profile-icon/profile-icon.com
   imports: [
     CommonModule,
     TranslateModule,
-
+    RouterModule,
     BrowserModule,
 
   ],

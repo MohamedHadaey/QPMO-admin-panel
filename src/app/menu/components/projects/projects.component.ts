@@ -28,18 +28,20 @@ export class ProjectsComponent {
       $('.content-body').removeClass('content-body-rtl');
       $('.content-body').addClass('content-body-ltr');
     }
+
+    let stepsForm: HTMLElement | null = document.querySelector('.multisteps-form__form');
+    // begin:: form with multiple steps
+    
+    // end:: form with multiple steps
+
   }
   /*********************************/
 
-  // this function to log out
-  logOut() {
-    this._AuthService.logout();
-  }
 
 
 
 
-
+  // pagination of list of projects
   changePage(eventInfo: any) {
     this.currentPage = eventInfo.target.innerHTML;
   }

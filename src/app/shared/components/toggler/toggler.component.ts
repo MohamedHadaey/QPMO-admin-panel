@@ -12,6 +12,7 @@ export class TogglerComponent implements OnInit {
   currentLanguage: any = localStorage.getItem("currentLanguage");
     // for responsive toggle sidebar
     toggle() {
+      $(".sub-list").slideToggle();
       const currentLanguage = localStorage.getItem("currentLanguage");
       if(currentLanguage == "ar"){
         if ($('.sidebar').css('width') == '220px') {

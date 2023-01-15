@@ -1,7 +1,7 @@
 <section class="content">
   <div class="row">
     <div class="sidebar">
-      <div class="bg-white pt-5 h-100">
+      <div class="bg-white h-100">
         <ul class="h-100">
           <li routerLink="/home"><img src="../../../../assets/images/Dashboard-icons/home.png"
               alt="home"><span>{{"home" | translate }}</span></li>
@@ -181,25 +181,76 @@
                                 </div>
                               </div>
                             </div>
-
-
-                            <div class="field">
-                              <h3>page 1</h3>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>تاريخ الانتهاء</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="date">
+                                </div>
+                              </div>
                             </div>
-                            <div class="field">
-                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit..</p>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>حالة المشروع</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option value="1" selected>المشاريع الحالية</option>
+                                    <option value="2">المشاريع المكتملة</option>
+                                    <option value="3">المشاريع الغير مكتملة</option>
+                                  </select>
+                                </div>
+                              </div>
                             </div>
-                            <div class="field">
-                              <input type="text" class="form-control" placeholder="type your name">
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>نسبة إنجاز الجهة</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="range"  id="temp" name="temp" list="tickmarks" value="50"
+                                  />
+                                  <datalist id="tickmarks">
+                                    <option value="0" label="100%"></option>
+                                    <option value="25" label="75%"></option>
+                                    <option value="50" label="50%"></option>
+                                    <option value="75" label="25%"></option>
+                                    <option value="100" label="0%"></option>
+                                  </datalist>
+                                </div>
+                              </div>
                             </div>
-                            <div class="field">
-                              <input type="text" class="form-control" placeholder="type your name">
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>نسبة إنجاز المقاول</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="range" id="temp" name="temp" list="tickmarks" value="25"
+                                  />
+                                  <datalist id="tickmarks">
+                                    <option value="0" label="100%"></option>
+                                    <option value="25" label="75%"></option>
+                                    <option value="50" label="50%"></option>
+                                    <option value="75" label="25%"></option>
+                                    <option value="100" label="0%"></option>
+                                  </datalist>
+                                </div>
+                              </div>
                             </div>
-                            <div class="field">
-                              <input type="text" class="form-control" placeholder="type your name">
-                            </div>
-                            <div class="field">
-                              <button class="btn btn-primary nextBtn" type="button">Next</button>
+                            <div class="row justify-content-end">
+                              <button class="btn nextBtn stepBtn" type="button">Next</button>
                             </div>
                           </div>
 

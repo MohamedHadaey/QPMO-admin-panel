@@ -136,8 +136,7 @@ a {
       transition: width 0.5s;
 
       ul {
-        padding: 20px 0;
-
+        padding: 37px 0 20px 0;
         margin: 0;
 
         li {
@@ -661,6 +660,7 @@ a {
                   font-weight: bold;
                   outline: none;
                   font-size: 14px !important;
+                  transition: all 0.4s;
 
                   span {
                     margin: 0 5px;
@@ -670,6 +670,10 @@ a {
                       color: #fff;
                       font-weight: bolder;
                     }
+                  }
+
+                  &:hover {
+                    border-radius: 5px;
                   }
                 }
 
@@ -756,7 +760,6 @@ a {
                       }
 
                       .form-outer {
-                        background-color: #00C6C1;
                         overflow: hidden;
 
 
@@ -788,7 +791,7 @@ a {
                                   }
                                 }
 
-                                input[type="text"], input[type="number"] {
+                                input[type="text"], input[type="number"], input[type="date"] {
                                   width: 100%;
                                   border: none;
                                   outline: none;
@@ -804,31 +807,75 @@ a {
                                   font-size: 14px;
                                 }
 
-                                input[type="number"]::-webkit-inner-spin-button
+                                input[type="number"]::-webkit-inner-spin-button,
+                                input[type="number"]::-webkit-outer-spin-button {
+                                  -webkit-appearance: none;
+                                  appearance: none;
+                                }
 
                                 select {
                                   border: none;
                                   outline: none;
                                   width: 100%;
-                                  height: 20px;
+                                  height: 100%;
                                   margin: 0 !important;
                                   padding: 0 !important;
                                   color: #749BC4;
                                   font-size: 14px;
-                                  background-color: transparent;
+                                  background-color: transparent !important;
                                   background-position: left;
                                 }
 
-                                .form-select:focus {
+                                select:focus {
                                   border-color: transparent !important;
                                   outline: 0 !important ;
                                   box-shadow: none !important;
-                              }
-                              }
-                            }
+                                }
 
-                            .field {
+                                datalist {
+                                  display: flex;
+                                  flex-direction: row;
+                                  justify-content: space-between;
+                                  width: 100%;
+                                  font-size: 12px;
+                                  color: #3D3D3D;
+                                  padding: 0;
+                                  margin: 0;
+                                }
 
+                                option {
+                                  padding: 0;
+                                }
+
+                                input[type="range"] {
+                                  width: 100%;
+                                  margin: 0;
+                                  padding: 0 10px;
+                                  direction: ltr;
+                                  padding: 0;
+                                  margin: 0;
+                                }
+
+                              }
+
+                              .stepBtn {
+                                color: #fff;
+                                background-color: #749BC4;
+                                border-radius: 15px;
+                                padding: 6px 20px;
+                                margin: 10px 10px 0px 10px;
+                                border: none;
+                                font-weight: bold;
+                                outline: none;
+                                font-size: 16px !important;
+                                width: 100px;
+                                margin: 0 right;
+                                transition: all 0.4s;
+
+                                &:hover {
+                                  border-radius: 5px;
+                                }
+                              }
                             }
                           }
                         }

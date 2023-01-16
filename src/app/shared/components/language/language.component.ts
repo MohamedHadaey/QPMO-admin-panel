@@ -31,7 +31,8 @@ export class LanguageComponent implements OnInit {
         $(".content-body").css("padding-right" , "0");
         $(".content-body").css("padding-left" , "55px");
       }
-      $(".profile-popup").css("left","-140px")
+      $(".profile-popup").css("left","-140px");
+     $("#bg-select").css("background-position","right");
     }
 
     // get arabic language
@@ -45,7 +46,9 @@ export class LanguageComponent implements OnInit {
         $(".content-body").css("padding-left" , "0");
         $(".content-body").css("padding-right" , "55px");
       }
-      $(".profile-popup").css("left","10px")
+      $(".profile-popup").css("left","10px");
+      $("#bg-select").css("background-position","left");
+
     }
 
 }

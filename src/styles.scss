@@ -791,7 +791,7 @@ a {
                                   }
                                 }
 
-                                input[type="text"], input[type="number"], input[type="date"] {
+                                input[type="text"], input[type="number"], input[type="date"] ,input[type="password"],input[type="email"] {
                                   width: 100%;
                                   border: none;
                                   outline: none;
@@ -802,7 +802,7 @@ a {
                                   background-color: transparent;
                                 }
 
-                                input[type="text"]::placeholder, input[type="number"]::placeholder {
+                                input[type="text"]::placeholder, input[type="number"]::placeholder,input[type="password"]::placeholder,input[type="email"]::placeholder {
                                   color: #749BC4;
                                   font-size: 14px;
                                 }
@@ -844,7 +844,7 @@ a {
                                 }
 
                                 option {
-                                  padding: 0;
+                                  padding: 0 10px;
                                 }
 
                                 input[type="range"] {
@@ -854,6 +854,10 @@ a {
                                   direction: ltr;
                                   padding: 0;
                                   margin: 0;
+                                }
+
+                                >span {
+                                  color: #888;
                                 }
 
                               }
@@ -875,6 +879,55 @@ a {
                                 &:hover {
                                   border-radius: 5px;
                                 }
+                              }
+
+                              input[type="checkbox"] {
+                                font-size: 18px;
+                              }
+                            }
+
+                            .list {
+                              box-shadow: none;
+                              padding: 0 !important;
+                              margin: 0;
+                              overflow: hidden;
+
+                              table {
+                                tr {
+                                  td {
+                                    .item {
+                                      input[type="checkbox"] {
+                                        font-size: 18px;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+
+                            .field {
+                              .stepBtn {
+                                color: #fff;
+                                background-color: #749BC4;
+                                border-radius: 15px;
+                                padding: 4px 20px;
+                                margin: 10px 10px 0px 10px;
+                                border: none;
+                                outline: none;
+                                font-size: 16px !important;
+                                width: 100px;
+                                margin: 0 right;
+                                transition: all 0.4s;
+
+                                &:hover {
+                                  border-radius: 5px;
+                                }
+                              }
+
+                              .prev-btn {
+                                color: #749BC4;
+                                background-color: #fff;
+                                outline: 2px solid #749BC4;
                               }
                             }
                           }
@@ -912,7 +965,7 @@ a {
 
                     th {
                       padding: 8px;
-                      min-width: 180px;
+                      min-width: 150px;
                     }
                   }
                 }

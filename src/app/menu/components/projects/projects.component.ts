@@ -11,7 +11,7 @@ import { Options } from '@angular-slider/ngx-slider';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-
+  checkDir: boolean = true;
   currentLanguage: any = localStorage.getItem('currentLanguage');
   display: any;
 
@@ -22,11 +22,15 @@ export class ProjectsComponent {
   ngOnInit(): void {
     // for check directions after any refresh
     if (this.currentLanguage == 'ar') {
+      this.checkDir = true;
       $('.content-body').removeClass('content-body-ltr');
       $('.content-body').addClass('content-body-rtl');
+      $("#bg-select").css("background-position","left");
     } else {
+      this.checkDir = true;
       $('.content-body').removeClass('content-body-rtl');
       $('.content-body').addClass('content-body-ltr');
+      $("#bg-select").css("background-position","right");
     }
 
 

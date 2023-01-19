@@ -77,18 +77,6 @@
         <div class="row p-0">
           <div class="col-12 p-3">
             <div class="list p-3">
-              <div class="row date-range">
-                <form action="">
-                <div class="range start">
-                  <span>{{"from" | translate }}</span>
-                  <input type="date" value="2022-01-01" id="start" name="range-start">
-                </div>
-                <div class="range end">
-                  <span>{{"to" | translate }}</span>
-                  <input type="date" value="2022-12-30" id="end" name="range-start">
-                </div>
-              </form>
-              </div>
               <div class="row reports">
                 <div class="col-md-6 p-3">
                   <div class="employees p-3">
@@ -118,13 +106,21 @@
                 </div>
                 <div class="col-md-6 p-3">
                   <div class="employees p-3">
-                    <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
+                    <div class="employees-head w-100 d-flex justify-content-between align-items-center">
                       <div class="logo d-flex align-items-center flex-grow-1">
                         <img src="../../../../assets/images/Dashboard-icons/rate.png" alt="rate">
                         <h4>{{"project-states" | translate }}</h4>
                       </div>
+                      <div class="date-span">
+                        <input type="date" name="end_project" class="w-100" value="2022-01-01">
+                      </div>
+                      <span class="fw-bold">:</span>
+                      <!-- <span>{{"to" | translate}}</span> -->
+                      <div class="date-span">
+                        <input type="date" name="end_project"  class="w-100" value="2022-12-30">
+                      </div>
                     </div>
-                    <div class="employees-number py-0">
+                    <div class="employees-number py-0 pt-2">
                       <div class="row">
                         <div class="chart-container">
                           <apx-chart [chart]="typeChartDetails" [series]="typeChartSeries" [labels]="[' إنارة طرق ',' طرق ',' صرف صحى ',' كبارى ']" [dataLabels]="typechartDetails"></apx-chart>
@@ -137,7 +133,7 @@
               <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg p-3">
                   <div class="projects-follow-card">
-                    <h4>{{"completed-projects" | translate }}</h4>
+                    <h4>{{"archieved-projects" | translate }}</h4>
                     <div class="number p-3">
                       <h3 id="color-yellow">80</h3>
                     </div>
@@ -145,7 +141,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg p-3">
                   <div class="projects-follow-card">
-                    <h4>{{"delayed-projects" | translate }}</h4>
+                    <h4>{{"correctly-archieved" | translate }}</h4>
                     <div class="number p-3">
                       <h3 id="color-red">25</h3>
                     </div>
@@ -153,7 +149,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg p-3">
                   <div class="projects-follow-card">
-                    <h4>{{"projects-neering" | translate }}</h4>
+                    <h4>{{"incorrectly-archieved" | translate }}</h4>
                     <div class="number p-3">
                       <h3 id="color-green">70</h3>
                     </div>
@@ -161,7 +157,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg p-3">
                   <div class="projects-follow-card">
-                    <h4>{{"current-projects" | translate }}</h4>
+                    <h4>{{"delayed-projects" | translate }}</h4>
                     <div class="number p-3">
                       <h3 id="color-primary">122</h3>
                     </div>
@@ -178,12 +174,12 @@
 
               </div>
               <div class="row justify-content-center align-items-center">
-                <div class="col-sm-8">
+                <div class="col-12">
                   <div class="employees p-3">
                     <div class="employees-head  w-100 d-flex justify-content-between align-items-center">
                       <div class="logo d-flex align-items-center flex-grow-1">
                         <img src="../../../../assets/images/Dashboard-icons/archives.png" alt="rate">
-                        <h4>{{"project-archive" | translate }}</h4>
+                        <h4>{{"project-movement" | translate }}</h4>
                       </div>
 
                     </div>

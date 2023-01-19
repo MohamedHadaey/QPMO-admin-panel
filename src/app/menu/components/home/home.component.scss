@@ -38,6 +38,24 @@
                 }
               }
 
+              .date-span {
+                background-color: #F0F2FA;
+                padding: 5px !important;
+                border-radius: 15px;
+                overflow: hidden;
+                margin: 0 5px 3px 5px !important;
+                max-width: 120px;
+                max-height: 29px;
+
+                input[type="date"] {
+                  border: none;
+                  outline: none;
+                  background-color: transparent;
+                  color: #3D3D3D;
+                  font-weight: 700;
+                }
+              }
+
               span {
                 color: #3D3D3D;
                 font-weight: bold !important;

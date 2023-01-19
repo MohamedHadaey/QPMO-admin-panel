@@ -105,6 +105,21 @@ a {
   color: #CCCCCC;
 
 }
+
+.form-switch {
+  padding-left: 2.5em;
+  padding-right: 2.5rem;
+}
+
+.form-switch .form-check-input {
+  margin-left: 0 !important;
+  float: none !important;
+}
+
+.form-check .form-check-input {
+  margin-left: 0 !important;
+  float: none !important;
+}
 /* end:: global styles for all project */
 
 
@@ -860,6 +875,16 @@ a {
                                   color: #888;
                                 }
 
+                                .access-btn {
+                                  color: #068DF5;
+                                  font-weight: bold;
+                                  transform: all 0.5s;
+
+                                  &:hover {
+                                    color: #333;
+                                  }
+                                }
+
                               }
 
                               .stepBtn {
@@ -902,6 +927,10 @@ a {
                                     }
                                   }
                                 }
+                              }
+
+                              hr {
+                                margin: 5px 0;
                               }
                             }
 
@@ -965,7 +994,7 @@ a {
 
                     th {
                       padding: 8px;
-                      min-width: 150px;
+                      min-width: 50px;
                     }
                   }
                 }
@@ -978,7 +1007,7 @@ a {
 
                     td {
                       border-bottom-width: 0;
-                      min-width: 180px;
+                      min-width: 50px;
                       border: 5px solid #fff;
                       padding: 0;
                       position: relative;
@@ -991,6 +1020,7 @@ a {
                       }
 
                       .item {
+                        width: 100;
                         margin: 0;
                         padding: 6px;
                         display: flex;
@@ -1004,6 +1034,9 @@ a {
                         }
 
                       }
+                    }
+                    td:nth-of-type(5) {
+                      min-width: 80px !important;
                     }
                   }
 

@@ -9,6 +9,9 @@ export class EmployeesSettingsComponent {
   checkDir: boolean = true;
   currentLanguage: any = localStorage.getItem('currentLanguage');
   display: any;
+  addAccess:boolean = false;
+  editAccess:boolean = false;
+
 
    ngOnInit(): void {
     // for check directions after any refresh
@@ -27,8 +30,11 @@ export class EmployeesSettingsComponent {
 
     // begin:: form with multiple steps
     const slidePage:HTMLElement | null = document.querySelector(".slidePage");
+    const slidePageEdit:HTMLElement | null = document.querySelector(".slidePageEdit");
     const firstNextBtn = document.querySelector(".nextBtn");
+    const firstNextBtnEdit = document.querySelector(".nextBtnEdit");
     const prevBtnSec = document.querySelector(".prev-1");
+    const prevBtnSecEdit = document.querySelector(".prev-1-edit");
     const nextBtnSec = document.querySelector(".next-1");
     const prevBtnThird = document.querySelector(".prev-2");
     const nextBtnThird = document.querySelector(".next-2");
@@ -38,7 +44,7 @@ export class EmployeesSettingsComponent {
     let max = 4;
     let current = 1;
 
-    // first next btn function
+    // first next btn function (add)
     firstNextBtn?.addEventListener("click", function(){
       if (localStorage.getItem('currentLanguage') == "en") {
         slidePage && (slidePage.style.marginLeft = "-25%");
@@ -46,6 +52,20 @@ export class EmployeesSettingsComponent {
         current += 1;
       }else {
         slidePage && (slidePage.style.marginRight = "-25%");
+        progressStep[current].classList.add("active");
+        current += 1;
+      }
+
+    })
+
+    // first next btn function (edit)
+    firstNextBtnEdit?.addEventListener("click", function(){
+      if (localStorage.getItem('currentLanguage') == "en") {
+        slidePageEdit && (slidePageEdit.style.marginLeft = "-25%");
+        progressStep[current].classList.add("active");
+        current += 1;
+      }else {
+        slidePageEdit && (slidePageEdit.style.marginRight = "-25%");
         progressStep[current].classList.add("active");
         current += 1;
       }
@@ -107,6 +127,20 @@ export class EmployeesSettingsComponent {
 
       })
 
+            // first prev btn function (edit)
+            prevBtnSecEdit?.addEventListener("click", function(){
+              if (localStorage.getItem('currentLanguage') == "en") {
+                slidePageEdit && (slidePageEdit.style.marginLeft = "0%");
+                progressStep[current-1].classList.remove("active");
+                current -= 1;
+              }else {
+                slidePageEdit && (slidePageEdit.style.marginRight = "0%");
+                progressStep[current-1].classList.remove("active");
+                current -= 1;
+              }
+
+            })
+
       // second prev btn function
       prevBtnThird?.addEventListener("click", function(){
         if (localStorage.getItem('currentLanguage') == "en") {
@@ -137,6 +171,13 @@ export class EmployeesSettingsComponent {
 
     // end:: form with multiple steps
 
+  }
+
+  showAddAccess() {
+    this.addAccess = !this.addAccess;
+  }
+  showEditAccess() {
+    this.editAccess = !this.editAccess;
   }
 
    // pagination of list of projects

@@ -40,9 +40,6 @@ export type ChartOptions = {
 };
 // end:: using charts
 
-
-
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -150,11 +147,11 @@ export class HomeComponent {
         series: [
           {
             name: " غير مكتملة ",
-            data: [31, 40, 28, 51, 42, 109, 100]
+            data: [11, 32, 45, 32, 34, 52, 41,31 , 40, 28, 51, 42],
           },
           {
             name: " مكتملة ",
-            data: [11, 32, 45, 32, 34, 52, 41]
+            data: [31, 40, 28, 51, 42, 109, 100 ,90, 80, 95, 100, 120],
           }
         ],
         chart: {
@@ -180,7 +177,12 @@ export class HomeComponent {
             " Apr ",
             " May ",
             " Jun ",
-            " Jul "
+            " Jul ",
+            " Aug ",
+            " Sep ",
+            " Oct ",
+            " Nov ",
+            " Dec "
           ],
         },
         tooltip: {

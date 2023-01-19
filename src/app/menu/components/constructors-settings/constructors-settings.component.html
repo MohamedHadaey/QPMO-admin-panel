@@ -3,26 +3,42 @@
     <div class="sidebar">
       <div class="bg-white h-100">
         <ul class="h-100">
-          <li routerLink="/home"><img src="../../../../assets/images/Dashboard-icons/home.png"
-              alt="home"><span>{{"home" | translate }}</span></li>
+          <li routerLink="/home"><img src="../../../../assets/images/Dashboard-icons/home.png" alt="home"><span>{{"home"
+              | translate }}</span></li>
           <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
               alt="projects"><span>{{"projects" | translate }}</span></li>
           <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
               alt="reports"><span>{{"statistics" | translate }}</span></li>
-              <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
-                alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-                <div class="collapse show sub-list" id="collapseExample">
-                  <div class="card card-body border-0 py-0 ">
-                    <ul class="py-1">
-                      <li routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
-                      <li class="active" routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
-                      <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
-                      <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
-                      <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
-                      <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
-                    </ul>
-                  </div>
-                </div>
+          <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
+              alt="reports">
+            <div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span
+                class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+          </li>
+          <div class="collapse show sub-list" id="collapseExample">
+            <div class="card card-body border-0 py-0 ">
+              <ul class="py-1">
+                <li routerLink="/employees-settings">
+                  <p>{{"employees-settings" | translate }}</p>
+                </li>
+                <li class="active" routerLink="/constructors-settings">
+                  <p>{{"constractor-settings" | translate }}</p>
+                </li>
+                <li routerLink="/project-types-settings">
+                  <p>{{"project-types-settings" | translate }}</p>
+                </li>
+                <li routerLink="/file-type-settings">
+                  <p>{{"file-type-settings" | translate }}</p>
+                </li>
+                <li routerLink="/departments">
+                  <p>{{"departments" | translate }}</p>
+                </li>
+                <li routerLink="/projects-processes">
+                  <p>{{"projects-process" | translate }}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </ul>
         <div class="list-group list-group-flush">
         </div>
@@ -42,20 +58,36 @@
                   alt="projects"><span>{{"projects" | translate }}</span></li>
               <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
                   alt="reports"><span>{{"statistics" | translate }}</span></li>
-                  <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
-                    alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-                    <div class="collapse show sub-list" id="collapseExample">
-                      <div class="card card-body border-0 py-0 ">
-                        <ul class="py-1">
-                          <li routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
-                          <li class="active" routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
-                          <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
-                          <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
-                          <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
-                          <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
-                        </ul>
-                      </div>
-                    </div>
+              <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
+                  alt="reports">
+                <div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate
+                    }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+              </li>
+              <div class="collapse show sub-list" id="collapseExample">
+                <div class="card card-body border-0 py-0 ">
+                  <ul class="py-1">
+                    <li routerLink="/employees-settings">
+                      <p>{{"employees-settings" | translate }}</p>
+                    </li>
+                    <li class="active" routerLink="/constructors-settings">
+                      <p>{{"constractor-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/project-types-settings">
+                      <p>{{"project-types-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/file-type-settings">
+                      <p>{{"file-type-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/departments">
+                      <p>{{"departments" | translate }}</p>
+                    </li>
+                    <li routerLink="/projects-processes">
+                      <p>{{"projects-process" | translate }}</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </ul>
             <div class="list-group list-group-flush">
             </div>
@@ -72,10 +104,617 @@
           <app-profile-icon></app-profile-icon>
         </div>
       </nav>
-      <div class="container-fluid w-100 p-4 p-md-5">
-        <div class="row settings-row bg-info">
-        <h1 class="text-center ">Constructors settings</h1>
-
+      <div class="container-fluid w-100 pt-3">
+        <div class="row row-list ">
+          <div class="col-12">
+            <div class="add-btn">
+              <button type="button" class="add-project-btn" data-bs-toggle="modal"
+                data-bs-target="#addConstructorModal">{{"add-new-constructor" | translate}} <span><i
+                    class="fa-solid fa-plus"></i></span></button>
+              <!-- add department Modal -->
+              <div class="modal fade" id="addConstructorModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog p-2">
+                  <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between w-100">
+                      <div class="d-flex">
+                        <p>{{"constractor-settings" | translate }}</p>
+                        <div class="dots">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                        <p><strong>{{"add-new-constructor" | translate}}</strong></p>
+                      </div>
+                      <div>
+                        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+                      </div>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-outer">
+                        <form>
+                          <div class="page slidePage page1">
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"contractors-name" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"commercial-register" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'lorem' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"phone-no" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'testing-number' | translate}}">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"user-name" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"password" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="password" placeholder="....................">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"company-name" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'lorem' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"location" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="www.Loremipsum.com" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"company-phone" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'testing-number' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"e-mail" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="email" placeholder="{{'XXXXXXX@gmail.com' | translate}}">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"address" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}"
+                                    autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"state" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg bg-transparent">
+                                  <div class="form-check form-switch d-flex">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                      id="flexSwitchCheckDefault" checked>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row justify-content-end">
+                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                                aria-label="Close">{{"submit" | translate}}</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- edit department Modal -->
+              <div class="modal fade" id="editConstructorModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog p-2">
+                  <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between w-100">
+                      <div class="d-flex">
+                        <p>{{"constractor-settings" | translate }}</p>
+                        <div class="dots">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                        <p><strong>{{"edit" | translate}}</strong></p>
+                      </div>
+                      <div>
+                        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+                      </div>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-outer">
+                        <form>
+                          <div class="page slidePage page1">
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"contractors-name" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"commercial-register" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'lorem' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"phone-no" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'testing-number' | translate}}">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"user-name" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"password" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="password" placeholder="....................">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"company-name" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'lorem' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"location" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="www.Loremipsum.com" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"company-phone" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'testing-number' | translate}}" autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"e-mail" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="email" placeholder="{{'XXXXXXX@gmail.com' | translate}}">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"address" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}"
+                                    autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"state" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg bg-transparent">
+                                  <div class="form-check form-switch d-flex">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                      id="flexSwitchCheckDefault" checked>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row justify-content-end">
+                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                                aria-label="Close">{{"submit" | translate}}</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 p-3">
+            <div class="list table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">{{"contractors-name" | translate }}</th>
+                    <th scope="col">{{"state" | translate }}</th>
+                    <th scope="col">{{"edit" | translate }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Zayn Mostafa" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Yahia Abdullah" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Zayn Mostafa" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Yahia Abdullah" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Zayn Mostafa" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Islam Hassan" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Tarek Ali" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Zayn Mostafa" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Zayn Mostafa" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Zeyad Ahmed" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Gamal Elsayed" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Hamza Sayed" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav aria-label="Page navigation example" class="nav-pag">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item " (click)="getPrviousPage()">
+                    <a class="page-link" [class.disable]="currentPage==1"><i class="fa-solid fa-angle-left"></i></a>
+                  </li>
+                  <!-- <li class="page-item"><a class="page-link">...</a></li> -->
+                  <li class="page-item" (click)="changePage($event)"><a class="page-link"
+                      [class.page]="currentPage==1">1</a></li>
+                  <li class="page-item" (click)="changePage($event)"><a [class.page]="currentPage==2"
+                      class="page-link">2</a></li>
+                  <li class="page-item" (click)="changePage($event)"><a class="page-link"
+                      [class.page]="currentPage==3">3</a></li>
+                  <li class="page-item"><a class="page-link">...</a></li>
+                  <li *ngIf="currentPage>3" class="page-item"><a class="page-link"
+                      [class.page]="currentPage>3">{{currentPage}}</a>
+                  </li>
+                  <li class="page-item" (click)="getNextPage()">
+                    <a class="page-link"><i class="fa-solid fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </div>

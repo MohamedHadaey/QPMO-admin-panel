@@ -1,4 +1,3 @@
-
 <section class="content">
   <div class="row">
     <div class="sidebar">
@@ -8,22 +7,63 @@
               alt="home"><span>{{"home" | translate }}</span></li>
           <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
               alt="projects"><span>{{"projects" | translate }}</span></li>
-          <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
-              alt="reports"><span>{{"statistics" | translate }}</span></li>
-          <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
-            alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-            <div class="collapse  " id="collapseExample">
-              <div class="card card-body border-0 py-0 ">
-                <ul class="py-1 sub-list">
-                  <li routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
-                  <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
-                  <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
-                  <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
-                  <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
-                  <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
-                </ul>
-              </div>
+          <li data-bs-toggle="collapse" href="#reportsList" role="button" aria-expanded="false"
+            aria-controls="collapseExample" class="mb-0 pb-0"><img
+              src="../../../../assets/images/Dashboard-icons/report.png" alt="reports">
+            <div class="d-flex justify-content-between flex-grow-1"><span>{{"reports" | translate }}</span><span
+                class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+          </li>
+          <div class="collapse  " id="reportsList">
+            <div class="card card-body border-0 py-0 ">
+              <ul class="py-1 sub-list">
+                <li routerLink="/projects-status">
+                  <p>{{"projects-status" | translate }}</p>
+                </li>
+                <li routerLink="/constructors">
+                  <p>{{"constructors" | translate }}</p>
+                </li>
+                <li routerLink="/projects-by-employee">
+                  <p>{{"projects-acc-to-employee" | translate }}</p>
+                </li>
+                <li routerLink="/user-movements">
+                  <p>{{"user-actions" | translate }}</p>
+                </li>
+                <li routerLink="/projects-follow">
+                  <p>{{"projects-follow" | translate }}</p>
+                </li>
+              </ul>
             </div>
+          </div>
+          <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
+              alt="reports">
+            <div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span
+                class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+          </li>
+          <div class="collapse  " id="collapseExample">
+            <div class="card card-body border-0 py-0 ">
+              <ul class="py-1 sub-list">
+                <li routerLink="/employees-settings">
+                  <p>{{"employees-settings" | translate }}</p>
+                </li>
+                <li routerLink="/constructors-settings">
+                  <p>{{"constractor-settings" | translate }}</p>
+                </li>
+                <li routerLink="/project-types-settings">
+                  <p>{{"project-types-settings" | translate }}</p>
+                </li>
+                <li routerLink="/file-type-settings">
+                  <p>{{"file-type-settings" | translate }}</p>
+                </li>
+                <li routerLink="/departments">
+                  <p>{{"departments" | translate }}</p>
+                </li>
+                <li routerLink="/projects-processes">
+                  <p>{{"projects-process" | translate }}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </ul>
         <div class="list-group list-group-flush">
         </div>
@@ -36,27 +76,68 @@
         </div>
         <div class="offcanvas-body p-0 px-2 bg-white">
           <div class="bg-white h-100">
-            <ul class="h-100">
+            <ul class="h-100 ">
               <li class="active" routerLink="/home"><img src="../../../../assets/images/Dashboard-icons/home.png"
                   alt="home"><span>{{"home" | translate }}</span></li>
               <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
                   alt="projects"><span>{{"projects" | translate }}</span></li>
-              <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
-                  alt="reports"><span>{{"statistics" | translate }}</span></li>
-              <li  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
-                alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body border-0 py-0 ">
-                    <ul class="py-1 sub-list">
-                      <li routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
-                      <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
-                      <li routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
-                      <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
-                      <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
-                      <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
-                    </ul>
-                  </div>
+              <li data-bs-toggle="collapse" href="#reportsList" role="button" aria-expanded="false"
+                aria-controls="collapseExample" class="mb-0 pb-0"><img
+                  src="../../../../assets/images/Dashboard-icons/report.png" alt="reports">
+                <div class="d-flex justify-content-between flex-grow-1"><span>{{"reports" | translate }}</span><span
+                    class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+              </li>
+              <div class="collapse" id="reportsList">
+                <div class="card card-body border-0 py-0">
+                  <ul class="py-1 sub-list">
+                    <li routerLink="/projects-status">
+                      <p>{{"projects-status" | translate }}</p>
+                    </li>
+                    <li routerLink="/constructors">
+                      <p>{{"constructors" | translate }}</p>
+                    </li>
+                    <li routerLink="/projects-by-employee">
+                      <p>{{"projects-acc-to-employee" | translate }}</p>
+                    </li>
+                    <li routerLink="/user-movements">
+                      <p>{{"user-actions" | translate }}</p>
+                    </li>
+                    <li routerLink="/projects-follow">
+                      <p>{{"projects-follow" | translate }}</p>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+              <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
+                  alt="reports">
+                <div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate
+                    }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+              </li>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body border-0 py-0 ">
+                  <ul class="py-1 sub-list">
+                    <li routerLink="/employees-settings">
+                      <p>{{"employees-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/constructors-settings">
+                      <p>{{"constractor-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/project-types-settings">
+                      <p>{{"project-types-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/file-type-settings">
+                      <p>{{"file-type-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/departments">
+                      <p>{{"departments" | translate }}</p>
+                    </li>
+                    <li routerLink="/projects-processes">
+                      <p>{{"projects-process" | translate }}</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </ul>
             <div class="list-group list-group-flush">
             </div>
@@ -88,19 +169,12 @@
                     </div>
                     <!-- begin:: chart -->
                     <div id="chart" class="my-2">
-                      <apx-chart
-                        [series]="statechartOptions.series"
-                        [chart]="statechartOptions.chart"
-                        [dataLabels]="statechartOptions.dataLabels"
-                        [plotOptions]="statechartOptions.plotOptions"
-                        [yaxis]="statechartOptions.yaxis"
-                        [xaxis]="statechartOptions.xaxis"
-                        [legend]="statechartOptions.legend"
-                        [colors]="statechartOptions.colors"
-                        [grid]="statechartOptions.grid"
-                      ></apx-chart>
+                      <apx-chart [series]="statechartOptions.series" [chart]="statechartOptions.chart"
+                        [dataLabels]="statechartOptions.dataLabels" [plotOptions]="statechartOptions.plotOptions"
+                        [yaxis]="statechartOptions.yaxis" [xaxis]="statechartOptions.xaxis"
+                        [legend]="statechartOptions.legend" [colors]="statechartOptions.colors"
+                        [grid]="statechartOptions.grid"></apx-chart>
                     </div>
-
                     <!-- end:: charts -->
                   </div>
                 </div>
@@ -117,13 +191,15 @@
                       <span class="fw-bold">:</span>
                       <!-- <span>{{"to" | translate}}</span> -->
                       <div class="date-span">
-                        <input type="date" name="end_project"  class="w-100" value="2022-12-30">
+                        <input type="date" name="end_project" class="w-100" value="2022-12-30">
                       </div>
                     </div>
                     <div class="employees-number py-0 pt-2">
                       <div class="row">
                         <div class="chart-container">
-                          <apx-chart [chart]="typeChartDetails" [series]="typeChartSeries" [labels]="[' إنارة طرق ',' طرق ',' صرف صحى ',' كبارى ']" [dataLabels]="typechartDetails"></apx-chart>
+                          <apx-chart [chart]="typeChartDetails" [series]="typeChartSeries"
+                            [labels]="[' إنارة طرق ',' طرق ',' صرف صحى ',' كبارى ']"
+                            [dataLabels]="typechartDetails"></apx-chart>
                         </div>
                       </div>
                     </div>
@@ -171,7 +247,6 @@
                     </div>
                   </div>
                 </div>
-
               </div>
               <div class="row justify-content-center align-items-center">
                 <div class="col-12">
@@ -181,20 +256,15 @@
                         <img src="../../../../assets/images/Dashboard-icons/archives.png" alt="rate">
                         <h4>{{"project-movement" | translate }}</h4>
                       </div>
-
                     </div>
                     <div class="employees-number py-0">
                       <div class="row">
                         <!--The content below is only a placeholder and can be replaced.-->
                         <div id="chart">
-                          <apx-chart
-                            [series]="archivechartOptions.series"
-                            [chart]="archivechartOptions.chart"
-                            [xaxis]="archivechartOptions.xaxis"
-                            [stroke]="archivechartOptions.stroke"
+                          <apx-chart [series]="archivechartOptions.series" [chart]="archivechartOptions.chart"
+                            [xaxis]="archivechartOptions.xaxis" [stroke]="archivechartOptions.stroke"
                             [tooltip]="archivechartOptions.tooltip"
-                            [dataLabels]="archivechartOptions.dataLabels"
-                          ></apx-chart>
+                            [dataLabels]="archivechartOptions.dataLabels"></apx-chart>
                         </div>
                       </div>
                     </div>

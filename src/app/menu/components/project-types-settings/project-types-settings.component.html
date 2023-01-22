@@ -3,26 +3,67 @@
     <div class="sidebar">
       <div class="bg-white h-100">
         <ul class="h-100">
-          <li routerLink="/home"><img src="../../../../assets/images/Dashboard-icons/home.png"
-              alt="home"><span>{{"home" | translate }}</span></li>
+          <li routerLink="/home"><img src="../../../../assets/images/Dashboard-icons/home.png" alt="home"><span>{{"home"
+              | translate }}</span></li>
           <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
               alt="projects"><span>{{"projects" | translate }}</span></li>
-          <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
-              alt="reports"><span>{{"statistics" | translate }}</span></li>
-              <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
-                alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-                <div class="collapse show sub-list" id="collapseExample">
-                  <div class="card card-body border-0 py-0 ">
-                    <ul class="py-1">
-                      <li  routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
-                      <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
-                      <li class="active" routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
-                      <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
-                      <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
-                      <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
-                    </ul>
-                  </div>
-                </div>
+          <li data-bs-toggle="collapse" href="#reportsList" role="button" aria-expanded="false"
+            aria-controls="collapseExample" class="mb-0 pb-0"><img
+              src="../../../../assets/images/Dashboard-icons/report.png" alt="reports">
+            <div class="d-flex justify-content-between flex-grow-1"><span>{{"reports" | translate }}</span><span
+                class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+          </li>
+          <div class="collapse  " id="reportsList">
+            <div class="card card-body border-0 py-0 ">
+              <ul class="py-1 sub-list">
+                <li routerLink="/projects-status">
+                  <p>{{"projects-status" | translate }}</p>
+                </li>
+                <li routerLink="/constructors">
+                  <p>{{"constructors" | translate }}</p>
+                </li>
+                <li routerLink="/projects-by-employee">
+                  <p>{{"projects-acc-to-employee" | translate }}</p>
+                </li>
+                <li routerLink="/user-movements">
+                  <p>{{"user-actions" | translate }}</p>
+                </li>
+                <li routerLink="/projects-follow">
+                  <p>{{"projects-follow" | translate }}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
+              alt="reports">
+            <div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span
+                class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+          </li>
+          <div class="collapse show sub-list" id="collapseExample">
+            <div class="card card-body border-0 py-0 ">
+              <ul class="py-1">
+                <li routerLink="/employees-settings">
+                  <p>{{"employees-settings" | translate }}</p>
+                </li>
+                <li routerLink="/constructors-settings">
+                  <p>{{"constractor-settings" | translate }}</p>
+                </li>
+                <li class="active" routerLink="/project-types-settings">
+                  <p>{{"project-types-settings" | translate }}</p>
+                </li>
+                <li routerLink="/file-type-settings">
+                  <p>{{"file-type-settings" | translate }}</p>
+                </li>
+                <li routerLink="/departments">
+                  <p>{{"departments" | translate }}</p>
+                </li>
+                <li routerLink="/projects-processes">
+                  <p>{{"projects-process" | translate }}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </ul>
         <div class="list-group list-group-flush">
         </div>
@@ -40,22 +81,63 @@
                   alt="home"><span>{{"home" | translate }}</span></li>
               <li routerLink="/projects"><img src="../../../../assets/images/ProjectManagement.png"
                   alt="projects"><span>{{"projects" | translate }}</span></li>
-              <li routerLink="/reports"><img src="../../../../assets/images/Dashboard-icons/report.png"
-                  alt="reports"><span>{{"statistics" | translate }}</span></li>
-                  <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
-                    alt="reports"><div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div></li>
-                    <div class="collapse show sub-list" id="collapseExample">
-                      <div class="card card-body border-0 py-0 ">
-                        <ul class="py-1">
-                          <li  routerLink="/employees-settings"><p>{{"employees-settings" | translate }}</p></li>
-                          <li routerLink="/constructors-settings"><p>{{"constractor-settings" | translate }}</p></li>
-                          <li class="active" routerLink="/project-types-settings"><p>{{"project-types-settings" | translate }}</p></li>
-                          <li routerLink="/file-type-settings"><p>{{"file-type-settings" | translate }}</p></li>
-                          <li routerLink="/departments"><p>{{"departments" | translate }}</p></li>
-                          <li routerLink="/projects-processes"><p>{{"projects-process" | translate }}</p></li>
-                        </ul>
-                      </div>
-                    </div>
+              <li data-bs-toggle="collapse" href="#reportsList" role="button" aria-expanded="false"
+                aria-controls="collapseExample" class="mb-0 pb-0"><img
+                  src="../../../../assets/images/Dashboard-icons/report.png" alt="reports">
+                <div class="d-flex justify-content-between flex-grow-1"><span>{{"reports" | translate }}</span><span
+                    class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+              </li>
+              <div class="collapse  " id="reportsList">
+                <div class="card card-body border-0 py-0 ">
+                  <ul class="py-1 sub-list">
+                    <li routerLink="/projects-status">
+                      <p>{{"projects-status" | translate }}</p>
+                    </li>
+                    <li routerLink="/constructors">
+                      <p>{{"constructors" | translate }}</p>
+                    </li>
+                    <li routerLink="/projects-by-employee">
+                      <p>{{"projects-acc-to-employee" | translate }}</p>
+                    </li>
+                    <li routerLink="/user-movements">
+                      <p>{{"user-actions" | translate }}</p>
+                    </li>
+                    <li routerLink="/projects-follow">
+                      <p>{{"projects-follow" | translate }}</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <li data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                aria-controls="collapseExample" class="mb-0 pb-0"><img src="../../../../assets/images/control.png"
+                  alt="reports">
+                <div class="d-flex justify-content-between flex-grow-1"><span>{{"control-panel" | translate
+                    }}</span><span class="px-2 pt-1 mb-0 h6"><i class="fa-solid fa-angle-up"></i></span></div>
+              </li>
+              <div class="collapse show sub-list" id="collapseExample">
+                <div class="card card-body border-0 py-0 ">
+                  <ul class="py-1">
+                    <li routerLink="/employees-settings">
+                      <p>{{"employees-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/constructors-settings">
+                      <p>{{"constractor-settings" | translate }}</p>
+                    </li>
+                    <li class="active" routerLink="/project-types-settings">
+                      <p>{{"project-types-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/file-type-settings">
+                      <p>{{"file-type-settings" | translate }}</p>
+                    </li>
+                    <li routerLink="/departments">
+                      <p>{{"departments" | translate }}</p>
+                    </li>
+                    <li routerLink="/projects-processes">
+                      <p>{{"projects-process" | translate }}</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </ul>
             <div class="list-group list-group-flush">
             </div>
@@ -111,7 +193,8 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}" autofocu="on">
+                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}"
+                                    autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -141,68 +224,69 @@
                   </div>
                 </div>
               </div>
-                 <!-- edit department Modal -->
-                 <div class="modal fade" id="editDepartmentModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
-                 <div class="modal-dialog p-2">
-                   <div class="modal-content">
-                     <div class="modal-header d-flex justify-content-between w-100">
-                       <div class="d-flex">
-                         <p>{{"project-types-settings" | translate }}</p>
-                         <div class="dots">
-                           <div class="dot"></div>
-                           <div class="dot"></div>
-                           <div class="dot"></div>
-                         </div>
-                         <p><strong>{{"edit" | translate}}</strong></p>
-                       </div>
-                       <div>
-                         <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
-                             class="fa-solid fa-xmark"></i></button>
-                       </div>
-                     </div>
-                     <div class="modal-body">
-                       <div class="form-outer">
-                         <form>
-                           <div class="page slidePage page1">
-                             <div class="row">
-                               <div class="col-4 p-1">
-                                 <div class="bg">
-                                   <p><strong>{{"project-type-name" | translate}}</strong></p>
-                                 </div>
-                               </div>
-                               <div class="col-8 p-1">
-                                 <div class="bg">
-                                   <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}" autofocu="on">
-                                 </div>
-                               </div>
-                             </div>
-                             <div class="row">
-                               <div class="col-4 p-1">
-                                 <div class="bg">
-                                   <p><strong>{{"state" | translate}}</strong></p>
-                                 </div>
-                               </div>
-                               <div class="col-8 p-1">
-                                 <div class="bg bg-transparent">
-                                   <div class="form-check form-switch d-flex">
-                                     <input class="form-check-input" type="checkbox" role="switch"
-                                       id="flexSwitchCheckDefault" checked>
-                                   </div>
-                                 </div>
-                               </div>
-                             </div>
-                             <div class="row justify-content-end">
-                               <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
-                                 aria-label="Close">{{"submit" | translate}}</button>
-                             </div>
-                           </div>
-                         </form>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- edit department Modal -->
+              <div class="modal fade" id="editDepartmentModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog p-2">
+                  <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between w-100">
+                      <div class="d-flex">
+                        <p>{{"project-types-settings" | translate }}</p>
+                        <div class="dots">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                        <p><strong>{{"edit" | translate}}</strong></p>
+                      </div>
+                      <div>
+                        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+                      </div>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-outer">
+                        <form>
+                          <div class="page slidePage page1">
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"project-type-name" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg">
+                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}"
+                                    autofocu="on">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-4 p-1">
+                                <div class="bg">
+                                  <p><strong>{{"state" | translate}}</strong></p>
+                                </div>
+                              </div>
+                              <div class="col-8 p-1">
+                                <div class="bg bg-transparent">
+                                  <div class="form-check form-switch d-flex">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                      id="flexSwitchCheckDefault" checked>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row justify-content-end">
+                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                                aria-label="Close">{{"submit" | translate}}</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-12 p-3">
@@ -231,7 +315,7 @@
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>
@@ -250,7 +334,7 @@
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>
@@ -262,33 +346,13 @@
                     </td>
                     <td>
                       <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          >
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                       </div>
                     </td>
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>
@@ -307,26 +371,7 @@
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          >
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>
@@ -345,7 +390,25 @@
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>
@@ -364,26 +427,7 @@
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          >
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>
@@ -402,7 +446,25 @@
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>
@@ -421,7 +483,7 @@
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>
@@ -434,13 +496,31 @@
                     <td>
                       <div class="item form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          >
+                          checked>
                       </div>
                     </td>
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                        data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
                       </div>
                     </td>
                   </tr>

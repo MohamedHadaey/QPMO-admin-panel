@@ -979,6 +979,24 @@ a {
               border-radius: 15px !important;
               width: 100% !important;
 
+              .report-title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                border-bottom: 1px solid #eee;
+
+                img {
+                  width: 60px;
+                  padding-bottom: 10px;
+                }
+
+                h3 {
+                  font-weight: bold;
+                  width: auto;
+                }
+              }
+
               table {
                 width: 100%;
                 border-radius: 10px;
@@ -987,6 +1005,7 @@ a {
                 white-space: nowrap;
 
                 thead {
+
                   tr {
                     border-style: none;
                     color: #fff;
@@ -1070,6 +1089,10 @@ a {
                 }
               }
 
+              .reports-table {
+                max-width: 400px;
+                margin: 20px auto;
+              }
 
             /* pagination styles */
             .nav-pag{
@@ -1196,6 +1219,12 @@ a {
       }
     }
   }
+
+  .report-title {
+    h3 {
+      font-size: 14px;
+    }
+  }
 }
 
 /* end small screen */
@@ -1240,6 +1269,12 @@ a {
           }
         }
       }
+    }
+  }
+
+  .report-title {
+    h3 {
+      font-size: 16px;
     }
   }
 }

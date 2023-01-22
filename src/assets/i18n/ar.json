@@ -203,7 +203,7 @@
   "log-out-word": "تسحيل الخروج",
   "check-logout-msg": "هل أنت متأكد انك تريد تسجبل الخروج؟",
 
-  "reports": "reports",
+  "reports": "التقارير",
   "project-status-card-title": "تقرير بحالة المشاريع خلال فترة",
   "contractors-reports-title": "تقارير المقاولين",
   "project-reports-title": "تقارير المشاريع حسب الموظف",
@@ -216,7 +216,14 @@
   "project-types-settings": "اعدادات انواع المشاريع",
   "file-type-settings": "اعدادات انواع الملفات",
   "departments": "الاقسام والادارات",
-  "projects-process": "العمليات على المشاريع"
+  "projects-process": "العمليات على المشاريع",
+  "projects-status": "حالة المشاريع",
+  "constructors": "المقاولين",
+  "projects-acc-to-employee": "المشاريع حسب الموظف",
+  "user-actions": "حركات الدخول مستخدم",
+  "projects-follow": "تتبع المشاريع"
+
+
   }
 
 

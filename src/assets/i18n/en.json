@@ -205,7 +205,7 @@
 "log-out-word": "Sign Out",
 "check-logout-msg": "Are you sure you want to Sign Out?",
 
-"reports": "reports",
+"reports": "Reports",
 "project-status-card-title": "Project status report over a period",
 "contractors-reports-title": "Contractors reports",
 "project-reports-title": "Project reports by employee",
@@ -218,7 +218,13 @@
 "project-types-settings": "Project types settings",
 "file-type-settings": "File type settings",
 "departments": "Departments",
-"projects-process": "Projects processes"
+"projects-process": "Projects processes",
+"projects-status": "Project status",
+"constructors": "Contractors",
+"projects-acc-to-employee": "Project by employee",
+"user-actions": "User logs movements",
+"projects-follow": "Project tracking"
+
 
 
 

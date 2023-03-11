@@ -6,11 +6,8 @@ export class MyIntercetor implements HttpInterceptor {
 
    let newReq = req.clone({
     headers : new HttpHeaders({
-      "Accept" : "application/json",
-      "lang" : `${localStorage.getItem("currentLanguage")}`,
-      "access-key" : "accessKey9A3q9p6V0eKVizqYt9Su9KAMfORbccWrvoJVUCGPKqHBvEgvtJq",
-      "Authorization" : `Bearer ${localStorage.getItem("token_api")}`
-
+      "culture" : `${localStorage.getItem("currentLanguage")}`,
+      "Authorization" : `Bearer ${localStorage.getItem("C_Code")}`
     })
    })
    return next.handle(newReq);

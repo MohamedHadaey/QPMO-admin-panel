@@ -183,7 +183,7 @@
                     </div>
                     <div class="modal-body">
                       <div class="form-outer">
-                        <form>
+                        <form [formGroup]="actionForm" (ngSubmit)="addAction(actionForm)">
                           <div class="page slidePage page1">
                             <div class="row">
                               <div class="col-4 p-1">
@@ -193,7 +193,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                  <input type="text" name="Project_action_Name"  formControlName="Project_action_Name" value="{{actionForm.value.Project_action_Name}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -219,7 +219,7 @@
                                 <div class="bg bg-transparent">
                                   <div class="form-check form-switch d-flex">
                                     <input class="form-check-input" type="checkbox" role="switch"
-                                      id="flexSwitchCheckDefault" checked>
+                                      id="flexSwitchCheckDefault" name="Project_action_Enabled"  formControlName="Project_action_Enabled" >
                                   </div>
                                 </div>
                               </div>
@@ -228,16 +228,16 @@
                               <div class="col-sm-6 d-flex justify-content-center">
                                 <p>{{"Contractor-Notice" | translate}}</p>
                                 <div class="form-check form-switch ms-3"><input class="form-check-input" type="checkbox"
-                                    role="switch" id="flexSwitchCheckDefault" checked></div>
+                                    role="switch" id="flexSwitchCheckDefault" name="Project_action_CheckMaqawlDefault"  formControlName="Project_action_CheckMaqawlDefault" ></div>
                               </div>
                               <div class="col-sm-6 d-flex justify-content-center">
                                 <p>{{"Employee-Notice" | translate}}</p>
                                 <div class="form-check form-switch ms-3"><input class="form-check-input" type="checkbox"
-                                    role="switch" id="flexSwitchCheckDefault"></div>
+                                    role="switch" id="flexSwitchCheckDefault" name="Project_action_CheckUserDefault"  formControlName="Project_action_CheckUserDefault" ></div>
                               </div>
                             </div>
                             <div class="row justify-content-end">
-                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                              <button class="btn stepBtn" type="submit" data-bs-dismiss="modal"
                                 aria-label="Close">{{"submit" | translate}}</button>
                             </div>
                           </div>
@@ -269,7 +269,7 @@
                     </div>
                     <div class="modal-body">
                       <div class="form-outer">
-                        <form>
+                        <form [formGroup]="actionForm" (ngSubmit)="editAction(actionForm)">
                           <div class="page slidePage page1">
                             <div class="row">
                               <div class="col-4 p-1">
@@ -277,9 +277,10 @@
                                   <p><strong>{{"process-name" | translate}}</strong></p>
                                 </div>
                               </div>
+                              <input type="hidden" name="Project_action_Id"  formControlName="Project_action_Id" value="{{actionForm.value.Project_action_Id}}" autofocu="on">
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                  <input type="text" name="Project_action_Name"  formControlName="Project_action_Name" value="{{actionForm.value.Project_action_Name}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -305,7 +306,7 @@
                                 <div class="bg bg-transparent">
                                   <div class="form-check form-switch d-flex">
                                     <input class="form-check-input" type="checkbox" role="switch"
-                                      id="flexSwitchCheckDefault" checked>
+                                      id="flexSwitchCheckDefault" name="Project_action_Enabled"  formControlName="Project_action_Enabled" [checked]="actionForm.value.Project_action_Enabled?true:false">
                                   </div>
                                 </div>
                               </div>
@@ -314,16 +315,16 @@
                               <div class="col-sm-6 d-flex justify-content-center">
                                 <p>{{"Contractor-Notice" | translate}}</p>
                                 <div class="form-check form-switch ms-3"><input class="form-check-input" type="checkbox"
-                                    role="switch" id="flexSwitchCheckDefault" checked></div>
+                                    role="switch" id="flexSwitchCheckDefault" name="Project_action_CheckMaqawlDefault"  formControlName="Project_action_CheckMaqawlDefault" [checked]="actionForm.value.Project_action_CheckMaqawlDefault?true:false"></div>
                               </div>
                               <div class="col-sm-6 d-flex justify-content-center">
                                 <p>{{"Employee-Notice" | translate}}</p>
                                 <div class="form-check form-switch ms-3"><input class="form-check-input" type="checkbox"
-                                    role="switch" id="flexSwitchCheckDefault"></div>
+                                    role="switch" id="flexSwitchCheckDefault" name="Project_action_CheckUserDefault"  formControlName="Project_action_CheckUserDefault" [checked]="actionForm.value.Project_action_CheckUserDefault?true:false"></div>
                               </div>
                             </div>
                             <div class="row justify-content-end">
-                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                              <button class="btn stepBtn" type="submit" data-bs-dismiss="modal"
                                 aria-label="Close">{{"submit" | translate}}</button>
                             </div>
                           </div>
@@ -345,228 +346,250 @@
                     <th scope="col">{{"edit" | translate }}</th>
                   </tr>
                 </thead>
+                <!-- <tbody>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"lorem" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editProcessModal">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody> -->
                 <tbody>
-                  <tr>
+                  <tr *ngFor="let action of actions">
                     <td>
                       <div class="item">
-                        <p>{{"lorem" | translate }}</p>
+                        <p>{{action.Project_action_Name}}</p>
                       </div>
                     </td>
                     <td>
                       <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" 
+                        [checked]="action.Project_action_Enabled?true:false"
+                        (click)="action.Project_action_Enabled?disable(action.Project_action_Id):enable(action.Project_action_Id)">
                       </div>
                     </td>
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"lorem" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editProcessModal">
+                          data-bs-target="#editProcessModal" (click)="getAction(action.Project_action_Id)">
                       </div>
                     </td>
                   </tr>

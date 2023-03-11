@@ -183,7 +183,7 @@
                     </div>
                     <div class="modal-body">
                       <div class="form-outer">
-                        <form>
+                        <form [formGroup]="maqawlForm" (ngSubmit)="addMaqawl(maqawlForm)">
                           <div class="page slidePage page1">
                             <div class="row">
                               <div class="col-4 p-1">
@@ -193,7 +193,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                  <input type="text" name="Maqawl_Name"  formControlName="Maqawl_Name" value="{{maqawlForm.value.Maqawl_Name}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -205,7 +205,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'lorem' | translate}}" autofocu="on">
+                                  <input type="text" name="Maqawl_TaxRecord"  formControlName="Maqawl_TaxRecord" value="{{maqawlForm.value.Maqawl_TaxRecord}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -217,7 +217,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'testing-number' | translate}}">
+                                  <input type="text" name="Maqawl_Phone"  formControlName="Maqawl_Phone" value="{{maqawlForm.value.Maqawl_Phone}}">
                                 </div>
                               </div>
                             </div>
@@ -229,7 +229,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                  <input type="text" name="Maqawl_UserName"  formControlName="Maqawl_UserName" value="{{maqawlForm.value.Maqawl_UserName}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -241,7 +241,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="password" placeholder="....................">
+                                  <input type="password" name="Maqawl_Password"  formControlName="Maqawl_Password" value="{{maqawlForm.value.Maqawl_Password}}">
                                 </div>
                               </div>
                             </div>
@@ -253,7 +253,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'lorem' | translate}}" autofocu="on">
+                                  <input type="text" name="Company_Name"  formControlName="Company_Name" value="{{maqawlForm.value.Company_Name}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -265,7 +265,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="www.Loremipsum.com" autofocu="on">
+                                  <input type="text" name="Company_Location"  formControlName="Company_Location" value="{{maqawlForm.value.Company_Location}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -277,7 +277,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'testing-number' | translate}}" autofocu="on">
+                                  <input type="text" name="Company_Phone"  formControlName="Company_Phone" value="{{maqawlForm.value.Company_Phone}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -289,7 +289,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="email" placeholder="{{'XXXXXXX@gmail.com' | translate}}">
+                                  <input type="email" name="Company_Email"  formControlName="Company_Email" value="{{maqawlForm.value.Company_Email}}">
                                 </div>
                               </div>
                             </div>
@@ -301,7 +301,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}"
+                                  <input type="text" name="Company_Address"  formControlName="Company_Address" value="{{maqawlForm.value.Company_Address}}"
                                     autofocu="on">
                                 </div>
                               </div>
@@ -315,14 +315,13 @@
                               <div class="col-8 p-1">
                                 <div class="bg bg-transparent">
                                   <div class="form-check form-switch d-flex">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                      id="flexSwitchCheckDefault" checked>
+                                    <input class="form-check-input" type="checkbox" role="switch" name="Maqawl_Enabled"  formControlName="Maqawl_Enabled">
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div class="row justify-content-end">
-                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                              <button class="btn stepBtn" type="submit" data-bs-dismiss="modal"
                                 aria-label="Close">{{"submit" | translate}}</button>
                             </div>
                           </div>
@@ -354,9 +353,10 @@
                     </div>
                     <div class="modal-body">
                       <div class="form-outer">
-                        <form>
+                        <form [formGroup]="maqawlForm" (ngSubmit)="editMaqawl(maqawlForm)">
                           <div class="page slidePage page1">
                             <div class="row">
+                              <input type="hidden" name="Maqawl_Id"  formControlName="Maqawl_Id" value="{{maqawlForm.value.Maqawl_Id}}" /><br />
                               <div class="col-4 p-1">
                                 <div class="bg">
                                   <p><strong>{{"contractors-name" | translate}}</strong></p>
@@ -364,7 +364,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                  <input type="text" name="Maqawl_Name"  formControlName="Maqawl_Name" value="{{maqawlForm.value.Maqawl_Name}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -376,7 +376,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'lorem' | translate}}" autofocu="on">
+                                  <input type="text" name="Maqawl_TaxRecord"  formControlName="Maqawl_TaxRecord" value="{{maqawlForm.value.Maqawl_TaxRecord}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -388,7 +388,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'testing-number' | translate}}">
+                                  <input type="text" name="Maqawl_Phone"  formControlName="Maqawl_Phone" value="{{maqawlForm.value.Maqawl_Phone}}">
                                 </div>
                               </div>
                             </div>
@@ -400,7 +400,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Yahia Abdullah' | translate}}" autofocu="on">
+                                  <input type="text" name="Maqawl_UserName"  formControlName="Maqawl_UserName" value="{{maqawlForm.value.Maqawl_UserName}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -412,7 +412,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="password" placeholder="....................">
+                                  <input type="password" name="Maqawl_Password"  formControlName="Maqawl_Password" value="{{maqawlForm.value.Maqawl_Password}}">
                                 </div>
                               </div>
                             </div>
@@ -422,9 +422,10 @@
                                   <p><strong>{{"company-name" | translate}}</strong></p>
                                 </div>
                               </div>
+                              <input type="hidden" name="Company_Id"  formControlName="Company_Id" value="{{maqawlForm.value.Company_Id}}" /><br />
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'lorem' | translate}}" autofocu="on">
+                                  <input type="text" name="Company_Name"  formControlName="Company_Name" value="{{maqawlForm.value.Company_Name}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -436,7 +437,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="www.Loremipsum.com" autofocu="on">
+                                  <input type="text" name="Company_Location"  formControlName="Company_Location" value="{{maqawlForm.value.Company_Location}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -448,7 +449,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'testing-number' | translate}}" autofocu="on">
+                                  <input type="text" name="Company_Phone"  formControlName="Company_Phone" value="{{maqawlForm.value.Company_Phone}}" autofocu="on">
                                 </div>
                               </div>
                             </div>
@@ -460,7 +461,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="email" placeholder="{{'XXXXXXX@gmail.com' | translate}}">
+                                  <input type="email" name="Company_Email"  formControlName="Company_Email" value="{{maqawlForm.value.Company_Email}}">
                                 </div>
                               </div>
                             </div>
@@ -472,7 +473,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}"
+                                  <input type="text" name="Company_Address"  formControlName="Company_Address" value="{{maqawlForm.value.Company_Address}}"
                                     autofocu="on">
                                 </div>
                               </div>
@@ -486,14 +487,13 @@
                               <div class="col-8 p-1">
                                 <div class="bg bg-transparent">
                                   <div class="form-check form-switch d-flex">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                      id="flexSwitchCheckDefault" checked>
+                                    <input class="form-check-input" type="checkbox" role="switch" name="Maqawl_Enabled"  formControlName="Maqawl_Enabled"  [checked]="maqawlForm.value.Maqawl_Enabled?true:false">
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div class="row justify-content-end">
-                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                              <button class="btn stepBtn" type="submit" data-bs-dismiss="modal"
                                 aria-label="Close">{{"submit" | translate}}</button>
                             </div>
                           </div>
@@ -515,7 +515,7 @@
                     <th scope="col">{{"edit" | translate }}</th>
                   </tr>
                 </thead>
-                <tbody>
+                <!-- <tbody>
                   <tr>
                     <td>
                       <div class="item">
@@ -737,6 +737,28 @@
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
                           data-bs-target="#editConstructorModal">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody> -->
+                <tbody>
+                  <tr *ngFor="let maqawl of maqawls">
+                    <td>
+                      <div class="item">
+                        <p>{{ maqawl.Maqawl_Name}}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" 
+                        [checked]="maqawl.Maqawl_Enabled?true:false"
+                        (click)="maqawl.Maqawl_Enabled?disable(maqawl.Maqawl_Id):enable(maqawl.Maqawl_Id)">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                        data-bs-target="#editConstructorModal" (click)="getMaqawl(maqawl.Maqawl_Id)">
                       </div>
                     </td>
                   </tr>

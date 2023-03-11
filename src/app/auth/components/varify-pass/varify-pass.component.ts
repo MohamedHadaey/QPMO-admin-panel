@@ -36,17 +36,17 @@ export class VarifyPassComponent implements OnInit {
     );
 
 
-    if (varifyForm.invalid) {
-      return;
-    } else {
-      if(this.code == 1111) {
-        localStorage.setItem("isLogin", JSON.stringify(true));
-        this._Router.navigate(['/home']);
-      }else{
-        $("#validate-msg").slideDown();
-        setTimeout( this.deleteMsg , 4000)
-      }
-    }
+    // if (varifyForm.invalid) {
+    //   return;
+    // } else {
+    //   if(this.code == 1111) {
+    //     localStorage.setItem("isLogin", JSON.stringify(true));
+    //     this._Router.navigate(['/home']);
+    //   }else{
+    //     $("#validate-msg").slideDown();
+    //     setTimeout( this.deleteMsg , 4000)
+    //   }
+    // }
 
 
     console.log(this.code)

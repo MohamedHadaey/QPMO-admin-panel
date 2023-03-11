@@ -183,7 +183,7 @@
                     </div>
                     <div class="modal-body">
                       <div class="form-outer">
-                        <form>
+                        <form [formGroup]="projectCategoryForm" (ngSubmit)="addProject(projectCategoryForm)">
                           <div class="page slidePage page1">
                             <div class="row">
                               <div class="col-4 p-1">
@@ -193,7 +193,7 @@
                               </div>
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}"
+                                  <input type="text" name="Pro_cat_Name"  formControlName="Pro_cat_Name" value="{{projectCategoryForm.value.Pro_cat_Name}}"
                                     autofocu="on">
                                 </div>
                               </div>
@@ -208,13 +208,13 @@
                                 <div class="bg bg-transparent">
                                   <div class="form-check form-switch d-flex">
                                     <input class="form-check-input" type="checkbox" role="switch"
-                                      id="flexSwitchCheckDefault" checked>
+                                      id="flexSwitchCheckDefault" name="Pro_cat_Enabled"  formControlName="Pro_cat_Enabled">
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div class="row justify-content-end">
-                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                              <button class="btn stepBtn" type="submit" data-bs-dismiss="modal"
                                 aria-label="Close">{{"submit" | translate}}</button>
                             </div>
                           </div>
@@ -246,7 +246,7 @@
                     </div>
                     <div class="modal-body">
                       <div class="form-outer">
-                        <form>
+                        <form [formGroup]="projectCategoryForm" (ngSubmit)="editProject(projectCategoryForm)">
                           <div class="page slidePage page1">
                             <div class="row">
                               <div class="col-4 p-1">
@@ -254,9 +254,10 @@
                                   <p><strong>{{"project-type-name" | translate}}</strong></p>
                                 </div>
                               </div>
+                              <input type="hidden" name="Pro_cat_Id"  formControlName="Pro_cat_Id" value="{{projectCategoryForm.value.Pro_cat_Id}}" value="{{'Excepteur-sint-occaecat' | translate}}">
                               <div class="col-8 p-1">
                                 <div class="bg">
-                                  <input type="text" placeholder="{{'Excepteur-sint-occaecat' | translate}}"
+                                  <input type="text" name="Pro_cat_Name"  formControlName="Pro_cat_Name" value="{{projectCategoryForm.value.Pro_cat_Name}}"
                                     autofocu="on">
                                 </div>
                               </div>
@@ -271,13 +272,13 @@
                                 <div class="bg bg-transparent">
                                   <div class="form-check form-switch d-flex">
                                     <input class="form-check-input" type="checkbox" role="switch"
-                                      id="flexSwitchCheckDefault" checked>
+                                      id="flexSwitchCheckDefault" name="Pro_cat_Enabled"  formControlName="Pro_cat_Enabled" [checked]="projectCategoryForm.value.Pro_cat_Enabled?true:false">
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div class="row justify-content-end">
-                              <button class="btn stepBtn" type="button" data-bs-dismiss="modal"
+                              <button class="btn stepBtn" type="submit" data-bs-dismiss="modal"
                                 aria-label="Close">{{"submit" | translate}}</button>
                             </div>
                           </div>
@@ -299,228 +300,250 @@
                     <th scope="col">{{"edit" | translate }}</th>
                   </tr>
                 </thead>
+                <!-- <tbody>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                          checked>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="item">
+                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="item">
+                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
+                          data-bs-target="#editDepartmentModal">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody> -->
                 <tbody>
-                  <tr>
+                  <tr *ngFor="let projectCategory of projectsCategories">
                     <td>
                       <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
+                        <p>{{ projectCategory.Pro_cat_Name }}</p>
                       </div>
                     </td>
                     <td>
                       <div class="item form-check form-switch">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
+                        [checked]="projectCategory.Pro_cat_Enabled?true:false"
+                        (click)="projectCategory.Pro_cat_Enabled?disable(projectCategory.Pro_cat_Id):enable(projectCategory.Pro_cat_Id)">
                       </div>
                     </td>
                     <td>
                       <div class="item">
                         <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                          checked>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="item">
-                        <p>{{"Excepteur-sint-occaecat" | translate }}</p>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      </div>
-                    </td>
-                    <td>
-                      <div class="item">
-                        <img src="../../../../assets/images/edit.png" class="hover" alt="edit" data-bs-toggle="modal"
-                          data-bs-target="#editDepartmentModal">
+                          data-bs-target="#editDepartmentModal" (click)="getProject(projectCategory.Pro_cat_Id)">
                       </div>
                     </td>
                   </tr>

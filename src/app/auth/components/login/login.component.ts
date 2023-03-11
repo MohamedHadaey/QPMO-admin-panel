@@ -21,21 +21,11 @@ export class LoginComponent implements OnInit {
 
 
 
-  loginForm: FormGroup = new FormGroup({
-    username: new FormControl(null, [
-      Validators.required,
-      Validators.min(5),
-      Validators.max(20)
-    ]),
-    password: new FormControl(null, [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(100),
-    ]),
-    checker: new FormControl(null, [
-
-    ])
-  });
+    loginForm: FormGroup = new FormGroup({
+      Username: new FormControl(null, [Validators.required]),
+      pass: new FormControl(null, [Validators.required]),
+      checker: new FormControl(null, []),
+    });
 
 
 
@@ -45,12 +35,33 @@ export class LoginComponent implements OnInit {
     if (loginForm.invalid) {
       return;
     } else {
-      if(loginForm.value.username == "admin" && loginForm.value.password == "12345"){
-        this._Router.navigate(['/varify-pass']);
-      }else {
-        $("#validate-msg").slideDown();
-        setTimeout( this.deleteMsg , 4000)
-      }
+      this._AuthService
+        .signIn(this.loginForm.value.Username, this.loginForm.value.pass)
+        .subscribe(
+          (response) => {
+            console.log(response);
+            if (response.Success) {
+              localStorage.setItem('isLogin','true');
+              this._Router.navigate(['/home']);
+              localStorage.setItem('C_Code', response.Data);
+            } else {
+              $('#validate-msg').slideDown();
+              setTimeout(this.deleteMsg, 4000);
+            }
+          },
+          (error) => {
+            if (this.currentLanguage == 'ar-sa') {
+              console.log('خطأ غير معروف من الخادم !!')
+            } else {
+              console.log('Unknown error From Server!!')
+            }
+            // if (this.currentLanguage == 'ar-sa') {
+            //   this.toastr.error('خطأ غير معروف من الخادم !!');
+            // } else {
+            //   this.toastr.error('Unknown error From Server!!');
+            // }
+          }
+        );
     }
     this.loginForm.reset();
   }
